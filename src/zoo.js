@@ -54,20 +54,23 @@ function calculateEntry(entrants = {}) {
 }
 
 function getAnimalMap(options) {
-  if (options === undefined) {
-    const exer10 = {}
-      exerc10.Friday = "Open from 10am until 8pm",
-      exerc10.Monday = "CLOSED", 
-      exerc10.Saturday = "Open from 8am until 10pm", 
-      exerc10.Sunday = "Open from 8am until 8pm", 
-      exerc10.Thursday ="Open from 10am until 8pm", 
-      exerc10.Tuesday = "Open from 8am until 6pm", 
-      exerc10.Wednesday = "Open from 8am until 6pm"
-  }
+  //
 }
 
 function getSchedule(dayName) {
-  // seu código aqui
+  const exerc10 = {
+    Friday: 'Open from 10am until 8pm',
+    Monday: 'CLOSED',
+    Saturday: 'Open from 8am until 10pm',
+    Sunday: 'Open from 8am until 8pm',
+    Thursday: 'Open from 10am until 8pm',
+    Tuesday: 'Open from 8am until 6pm',
+    Wednesday: 'Open from 8am until 6pm',
+  }
+  if (dayName === undefined){
+    return exerc10
+    };
+  return { [dayName]: exerc10[dayName] };
 }
 
 function getOldestFromFirstSpecies(id) {
